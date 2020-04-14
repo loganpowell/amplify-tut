@@ -6,6 +6,7 @@ import { onCreateTodo } from "./graphql/subscriptions"
 
 // configure library
 import awsconfig from "./aws-exports"
+
 API.configure(awsconfig)
 PubSub.configure(awsconfig)
 

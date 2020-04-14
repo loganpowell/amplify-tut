@@ -1,7 +1,7 @@
 package-lock.json
 node_modules/
 .cache
-dist/
+.env
 
 #amplify
 amplify/\#current-cloud-backend

@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "@aws-amplify/api": "latest",
-    "@aws-amplify/pubsub": "latest"
+    "@aws-amplify/pubsub": "latest",
+    "dotenv": "^8.2.0"
   },
   "peerDependencies": {},
   "devDependencies": {

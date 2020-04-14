@@ -23,4 +23,7 @@ module.exports = {
     hot: true,
   },
   plugins: [new CopyWebpackPlugin(["index.html"]), new webpack.HotModuleReplacementPlugin()],
+  node: {
+    fs: "empty",
+  },
 }
