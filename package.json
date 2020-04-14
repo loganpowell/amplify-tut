@@ -1,26 +1,23 @@
 {
-  "name": "ts-starter",
+  "name": "amplify-tut",
   "author": "Logan Powell",
   "license": "MIT",
   "version": "0.2.67",
-  "description": "typescript configuration and starter project",
+  "description": "amplify tutorial",
   "main": "./lib/index.js",
   "type": "module",
   "types": "./lib/index.d.ts",
-  "repository": "https://github.com/loganpowell/ts-starter",
-  "homepage": "https://github.com/loganpowell/ts-starter",
+  "repository": "https://github.com/loganpowell/amplify-tut",
+  "homepage": "https://github.com/loganpowell/amplify-tut",
   "scripts": {
     "typewatch": "tsc --project tsconfig.json",
     "types": "tsc --project tsconfig.build.json",
     "madge": "madge --circular lib/",
-    "jsdoc": "jsdoc -c jsdoc/jsdoc.json --verbose --debug",
-    "pages": "gh-pages -d @-0/spool",
+    "pages": "gh-pages -d dist",
     "docs": "npm run types && npm run jsdoc",
-    "patch": "npm version patch && npm run docs && npm run pages && npm publish",
     "tests": "npm run types && npm run madge && jest",
-    "postgit": "git push origin master && npm run patch",
-    "ncu": "ncu -u && npm i",
-    "git": "npm run ncu && git add . && git commit -m"
+    "start": "webpack && webpack-dev-server --mode development",
+    "build": "webpack"
   },
   "keywords": [
     "typescript",
@@ -29,17 +26,23 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@aws-amplify/api": "latest",
+    "@aws-amplify/pubsub": "latest"
+  },
   "peerDependencies": {},
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "@typescript-eslint/parser": "^2.28.0",
-    "better-docs": "^1.4.7",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "gh-pages": "^2.2.0",
     "jest": "^25.3.0",
-    "prettier": "^2.0.4"
+    "prettier": "^2.0.4",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "copy-webpack-plugin": "^5.1.1",
+    "webpack-dev-server": "^3.10.3"
   },
   "prettier": {
     "singleQuote": false,
