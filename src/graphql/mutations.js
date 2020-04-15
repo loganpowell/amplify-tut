@@ -1,39 +1,48 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createTodo = /* GraphQL */ `
-  mutation CreateTodo(
-    $input: CreateTodoInput!
-    $condition: ModelTodoConditionInput
+export const createTalk = /* GraphQL */ `
+  mutation CreateTalk(
+    $input: CreateTalkInput!
+    $condition: ModelTalkConditionInput
   ) {
-    createTodo(input: $input, condition: $condition) {
+    createTalk(input: $input, condition: $condition) {
       id
+      clientId
       name
       description
+      speakerName
+      speakerBio
     }
   }
 `;
-export const updateTodo = /* GraphQL */ `
-  mutation UpdateTodo(
-    $input: UpdateTodoInput!
-    $condition: ModelTodoConditionInput
+export const updateTalk = /* GraphQL */ `
+  mutation UpdateTalk(
+    $input: UpdateTalkInput!
+    $condition: ModelTalkConditionInput
   ) {
-    updateTodo(input: $input, condition: $condition) {
+    updateTalk(input: $input, condition: $condition) {
       id
+      clientId
       name
       description
+      speakerName
+      speakerBio
     }
   }
 `;
-export const deleteTodo = /* GraphQL */ `
-  mutation DeleteTodo(
-    $input: DeleteTodoInput!
-    $condition: ModelTodoConditionInput
+export const deleteTalk = /* GraphQL */ `
+  mutation DeleteTalk(
+    $input: DeleteTalkInput!
+    $condition: ModelTalkConditionInput
   ) {
-    deleteTodo(input: $input, condition: $condition) {
+    deleteTalk(input: $input, condition: $condition) {
       id
+      clientId
       name
       description
+      speakerName
+      speakerBio
     }
   }
 `;

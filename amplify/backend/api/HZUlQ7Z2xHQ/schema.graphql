@@ -1,0 +1,13 @@
+# @model is a custom amplify graphql directive (1 of 7),
+# which takes a base type and generates and entire graphql
+# API based on some best practice assumptions of access
+type Talk
+  # generate CRUDL operations w/resolvers
+  @model {
+  id: ID!
+  clientId: ID
+  name: String!
+  description: String!
+  speakerName: String!
+  speakerBio: String!
+}

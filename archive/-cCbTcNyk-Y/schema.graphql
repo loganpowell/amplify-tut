@@ -1,0 +1,45 @@
+type Post
+  @model
+  @auth(
+    rules: [
+      {
+        # who created the post can CRUD
+        allow: owner
+        # anyone can read the post
+        queries: null
+      }
+    ]
+  ) {
+  id: ID!
+  title: String!
+  # @connection decorator creates a relationship from comments to a Comment
+  comments: [Comment] @connection(name: "PostComments", sortField: "createdAt")
+}
+
+type Comment @model {
+  id: ID!
+  content: String!
+  createdAt: String
+  post: Post @connection(name: "PostComments", sortField: "createdAt")
+}
+
+# @key = global secondary index (dynamodb) for queries
+type Event
+  @model
+  @key(
+    name: "queryName"
+    fields: [
+      # index for query (primary key)
+      "queryName"
+      # sort field (sort key)
+      "createdAt"
+    ]
+    # graphql query to list items by 'createdAt'
+    queryField: "itemsByDate"
+  ) {
+  id: ID!
+  name: String!
+  createdAt: String!
+  # allows dynamodb queries
+  queryName: String!
+}

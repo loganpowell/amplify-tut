@@ -17,6 +17,7 @@
     "docs": "npm run types && npm run jsdoc",
     "tests": "npm run types && npm run madge && jest",
     "start": "webpack && webpack-dev-server --mode development",
+    "parcel": "parcel index.html watch",
     "build": "webpack"
   },
   "keywords": [
@@ -29,7 +30,8 @@
   "dependencies": {
     "@aws-amplify/api": "latest",
     "@aws-amplify/pubsub": "latest",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "regenerator-runtime": "^0.13.5"
   },
   "peerDependencies": {},
   "devDependencies": {
