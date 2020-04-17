@@ -17,7 +17,7 @@
     "docs": "npm run types && npm run jsdoc",
     "tests": "npm run types && npm run madge && jest",
     "start": "webpack && webpack-dev-server --mode development",
-    "parcel": "parcel index.html watch",
+    "parcel": "parcel src/index.html watch",
     "build": "webpack"
   },
   "keywords": [
