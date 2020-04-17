@@ -309,13 +309,13 @@ IAM Policy Sources:
 
 
 [Custom AWS Directives]: https://aws-amplify.github.io/docs/cli-toolchain/graphql
-[@model]: https://aws-amplify.github.io/docs/cli-toolchain/graphql#model
-[@key]: https://aws-amplify.github.io/docs/cli-toolchain/graphql#key
-[@auth]: https://aws-amplify.github.io/docs/cli-toolchain/graphql#auth
-[@function]: https://aws-amplify.github.io/docs/cli-toolchain/graphql#function
-[@connection]: https://aws-amplify.github.io/docs/cli-toolchain/graphql#connection
-[@versioned]: https://aws-amplify.github.io/docs/cli-toolchain/graphql#versioned
-[@searchable]: https://aws-amplify.github.io/docs/cli-toolchain/graphql#searchable
+[@model]: https://docs.amplify.aws/cli/graphql-transformer/directives#model
+[@key]: https://docs.amplify.aws/cli/graphql-transformer/directives#key
+[@auth]: https://docs.amplify.aws/cli/graphql-transformer/directives#auth
+[@function]: https://docs.amplify.aws/cli/graphql-transformer/directives#function
+[@connection]: https://docs.amplify.aws/cli/graphql-transformer/directives#connection
+[@versioned]: https://docs.amplify.aws/cli/graphql-transformer/directives#versioned
+[@searchable]: https://docs.amplify.aws/cli/graphql-transformer/directives#searchable
 
 
 [Access Patterns]: https://aws-amplify.github.io/docs/cli-toolchain/graphql#data-access-patterns
